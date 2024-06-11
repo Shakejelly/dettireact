@@ -16,7 +16,7 @@ const Portfolio = () => {
         description: 'Grupprojekt',
         stargazers_count: 5,
         forks_count: 0,
-        language: 'C#, React',
+        language: 'C#, JS',
         html_url: 'https://johantran02.github.io/chas-challenge/'
       };
       setProjects([xplore, ...response.data ]);
