@@ -1,0 +1,34 @@
+{
+    "education": [
+        {
+            "schoolName": "Chas Academy",
+            "timeLapse": "2023-2025",
+            "text": "Fullstack .NET"
+        },
+        {
+            "schoolName": "Fryshuset Gymnasium",
+            "timeLapse": "2009-2012",
+            "text": "Social Science"
+        }
+    ],
+    "work": [
+        {
+            "companyName": "Systembolaget Västberga",
+            "timeLapse": "2019-current",
+            "role": "Teamleader",
+            "text": "As a teamleader at Systembolaget I manage and guide my collegues ensuring smooth operations and excellent costumer service. My responsabilities include projectmanagement, conducting meetings, and organizing product tastings. My leadership and organizational skills help maintain a motivated and efficient team."
+        },
+        {
+            "companyName": "systembolaget Skärholmen",
+            "timeLapse": "2017-2019",
+            "role": "Sales Assosiate, Teamleader",
+            "text": "As a sales associate I learned to provide an exceptional costumer service and assured the store was well organized"
+        },
+        {
+            "companyName": "Huddinge Sjukhus",
+            "timeLapse": "2012-2016",
+            "role": "Mental Health Care Assistant",
+            "text": "As a mental health care assistant I provided compassionate support and care to patient with mental health issues. It included assisting with daily activities, monitoring patient progress and collaborating with health care proffesionals. My role required empathy, patience, and strong communication skills to ensure a safe and supportive enviorment for patients."
+        }
+    ]
+}
