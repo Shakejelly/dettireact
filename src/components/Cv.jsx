@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import cvData from '.../public/data/cvdata'
 
 const Cv = () => {
     const [cvInfo, setCvInfo] = useState({ education: [], work: [] });
@@ -8,7 +9,7 @@ const Cv = () => {
   
     useEffect(() => {
 
-      axios.get('data/cvdata.json') 
+      axios.get(cvData) 
         .then(response => {
           setCvInfo(response.data);
           setLoading(false);
