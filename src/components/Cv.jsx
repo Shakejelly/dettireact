@@ -1,25 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import cvData from '.../public/data/cvdata.json'
+import cvData from '../public/data/cvdata.json';
 
 const Cv = () => {
     const [cvInfo, setCvInfo] = useState({ education: [], work: [] });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
   
-    useEffect(() => {
 
-      axios.get(cvData) 
-        .then(response => {
-          setCvInfo(response.data);
-          setLoading(false);
-        })
-        .catch(error => {
-          setError('Kunde inte ladda in projekt. Försök igen senare.');
-          setLoading(false);
-          console.error('Error fetching data:', error);
-        });
-    }, []);
+      useEffect(() => {
+        // Directly setting the imported JSON data
+        setCvInfo(cvData);
+        setLoading(false);
+      }, []);
   
     if (loading) {
       return <div>Laddar CV...</div>;
