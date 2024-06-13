@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import cvData from 'cvdata.json'
+import cvData from '.../public/data/cvdata.json'
 
 const Cv = () => {
     const [cvInfo, setCvInfo] = useState({ education: [], work: [] });
