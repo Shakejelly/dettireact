@@ -8,7 +8,6 @@ const Cv = () => {
   
 
       useEffect(() => {
-        // Directly setting the imported JSON data
         setCvInfo(cvData);
         setLoading(false);
       }, []);
