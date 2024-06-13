@@ -1,16 +1,34 @@
 import React, { useEffect, useState } from 'react';
-import cvData from '../public/data/cvdata.json';
+import axios from 'axios';
 
 const Cv = () => {
-    const [cvInfo, setCvInfo] = useState({ education: [], work: [] });
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
-  
+  const [cvInfo, setCvInfo] = useState({ education: [], work: [] });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-      useEffect(() => {
-        setCvInfo(cvData);
+  useEffect(() => {
+    const fetchCvData = async () => {
+      try {
+        let response;
+        if (process.env.NODE_ENV === 'development') {
+          // Local development: fetch JSON file directly
+          response = await axios.get('/data/cvdata.json');
+        } else {
+          // Production: use absolute URL or appropriate path
+          response = await axios.get(`${process.env.PUBLIC_URL}/data/cvdata.json`);
+        }
+        setCvInfo(response.data);
         setLoading(false);
-      }, []);
+      } catch (error) {
+        setError('Kunde inte ladda in projekt. Försök igen senare.');
+        setLoading(false);
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchCvData();
+  }, []);
+
   
     if (loading) {
       return <div>Laddar CV...</div>;
