@@ -12,10 +12,10 @@ const Cv = () => {
         let response;
         if (process.env.NODE_ENV === 'development') {
           // Local development: fetch JSON file directly
-          response = await axios.get('/data/cvdata.json');
+          response = await axios.get('../data/cvdata.json');
         } else {
           // Production: use absolute URL or appropriate path
-          response = await axios.get(`${process.env.PUBLIC_URL}/data/cvdata.json`);
+          response = await axios.get(`${process.env.PUBLIC_URL}../data/cvdata.json`);
         }
         setCvInfo(response.data);
         setLoading(false);
