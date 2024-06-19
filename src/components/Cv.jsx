@@ -9,7 +9,8 @@ const Cv = () => {
   useEffect(() => {
     const fetchCvData = async () => {
       try {
-        const url = `${process.env.PUBLIC_URL}/data/cvdata.json`;
+        const baseUrl = process.env.PUBLIC_URL || 'https://shakejelly.github.io/dettireact';
+        const url = `${baseUrl}/data/cvdata.json`;
         console.log('Fetching data from:', url);
         const response = await axios.get(url);
         console.log('Data fetched successfully:', response.data);
