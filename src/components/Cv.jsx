@@ -9,6 +9,7 @@ const Cv = () => {
   useEffect(() => {
     const fetchCvData = async () => {
       try {
+        // Använd en hårdkodad bas-URL som fallback om PUBLIC_URL är undefined
         const baseUrl = process.env.PUBLIC_URL || 'https://shakejelly.github.io/dettireact';
         const url = `${baseUrl}/data/cvdata.json`;
         console.log('Fetching data from:', url);
