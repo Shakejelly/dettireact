@@ -9,7 +9,10 @@ const Cv = () => {
   useEffect(() => {
     const fetchCvData = async () => {
       try {
-        const response = await axios.get(`${process.env.PUBLIC_URL}/data/cvdata.json`);
+        const url = `${process.env.PUBLIC_URL}/data/cvdata.json`;
+        console.log('Fetching data from:', url);
+        const response = await axios.get(url);
+        console.log('Data fetched successfully:', response.data);
         setCvInfo(response.data);
         setLoading(false);
       } catch (error) {
