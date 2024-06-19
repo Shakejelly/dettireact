@@ -1,7 +1,7 @@
 {
   "name": "dettireact",
   "private": true,
-  "homepage": "https://shakejelly.github.io/dettireact/",
+  "homepage": "https://shakejelly.github.io/dettireact",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
