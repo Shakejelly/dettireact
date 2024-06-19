@@ -1,3 +1,4 @@
+import React from 'react';
 import cvBild from '../assets/cvBild.jpg'
 
 function Home() {
