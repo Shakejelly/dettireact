@@ -1,4 +1,4 @@
-import cvBild from 'cvbild.jpg'
+import cvBild from '../assets/cvBild.jpg'
 
 function Home() {
     return (
